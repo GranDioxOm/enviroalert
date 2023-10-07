@@ -2,7 +2,11 @@
 {% load static %}
 
 {% block body %}
-<img src="{% static 'img/empty.png' %}" alt="Imagen de Fondo" class="back_map">
+<img src="{% static 'img/empty.png' %}" alt="Imagen de Fondo" class="back_map" usemap="#image-map">
+
+<map name="image-map">
+    <area target="" alt="" title="" href="/" coords="1008,127,868,20" shape="rect">
+</map>
     <div class="map">
         <iframe width="1000" height="800"
                 src="https://lookerstudio.google.com/embed/reporting/d3317a20-61c3-4529-8409-8e5967daebd5/page/G2reD"
