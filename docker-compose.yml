@@ -1,0 +1,24 @@
+version: '2'
+services:
+
+  web:
+    build: .
+    restart: on-failure
+    container_name: enviroalert
+    image: enviroalert:latest
+    working_dir: /local/enviroalert
+    command: bash -c "python manage.py runserver 0.0.0.0:8000"
+    volumes:
+      - ./:/local
+    ports:
+      - "8000:8000"
+    expose:
+      - "8000"
+    env_file:
+      - enviroalert/.env
+
+volumes:
+  mysql_data:
+    driver: local
+
+
