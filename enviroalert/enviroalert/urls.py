@@ -17,6 +17,8 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from web import views
+from django.contrib.staticfiles.urls import staticfiles_urlpatterns
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -24,4 +26,16 @@ urlpatterns = [
 
 urlpatterns += [
     path('', views.IndexView.as_view(), name='index'),
+    path('fire-main', views.FireView.as_view(), name='fire-main'),
+    path('fire-map', views.FireMap.as_view(), name='fire-map'),
+    path('fire-learn', views.FireLearn.as_view(), name='fire-learn'),
+    path('fire-report', views.FireReport.as_view(), name='fire-report'),
+    path('fire-report-2', views.FireReport2.as_view(), name='fire-report-2'),
+    path('fire-report-3', views.FireReport3.as_view(), name='fire-report-3'),
+    path('fire-report-4', views.FireReport4.as_view(), name='fire-report-4'),
+    path('fire-report-5', views.FireReport5.as_view(), name='fire-report-5'),
+    path('fire-report-6', views.FireReport6.as_view(), name='fire-report-6'),
+
 ]
+urlpatterns += staticfiles_urlpatterns()
+

@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block body %}
+
+<img src="{% static 'img/web.png' %}" usemap="#image-map">
+
+<map name="image-map">
+    <area target="_self" alt="fire-main" title="fire-main" href="fire-main" coords="267,512,491,927" shape="rect">
+</map>
+
+{% endblock %}
