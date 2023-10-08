@@ -34,6 +34,5 @@ urlpatterns += [
     path('fire-report-4', views.FireReport4.as_view(), name='fire-report-4'),
     path('fire-report-5', views.FireReport5.as_view(), name='fire-report-5'),
     path('fire-report-6', views.FireReport6.as_view(), name='fire-report-6'),
-
 ]
 urlpatterns += staticfiles_urlpatterns()

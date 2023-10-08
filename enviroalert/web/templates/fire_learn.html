@@ -3,10 +3,15 @@
 
 {% block body %}
 
-<img src="{% static 'img/web.png' %}" usemap="#image-map">
+<img src="{% static 'img/learn.png' %}" usemap="#image-map">
+
 
 <map name="image-map">
-    <area target="_self" alt="" title="" href="/fire-main" coords="398,424,576,763" shape="rect">
+    <area target="_blank" alt="" title="" href="{% static 'pdf/how_to_act.pdf' %}"
+          coords="679,220,976,361"
+          shape="rect">
+    <area target="" alt="" title="" href="/" coords="1008,127,868,20" shape="rect">
+    <area target="" alt="" title="" href="/fire-learn" coords="1227,63,1334,112" shape="rect">
 </map>
 
 {% endblock %}
